@@ -217,6 +217,102 @@
           }
         ]
       }
+    },
+    {
+      "id": "html-13-div-span",
+      "version": 1,
+      "number": 13,
+      "title": "Lekcija 13 — div i span",
+      "level": "Početnik",
+      "summary": "Nauči da grupišeš HTML sadržaj: <div> za veći deo stranice, <span> za deo teksta. Ovi elementi bez CSS-a ne dodaju boje niti posebnu dekoraciju.",
+      "language": "html",
+      "steps": [
+        {
+          "label": "Šta je div?",
+          "description": "<div> je neutralna kutija za grupisanje više elemenata. Po pravilu zauzima novu liniju. Zatvara se sa </div>."
+        },
+        {
+          "label": "Šta je span?",
+          "description": "<span> označava mali deo teksta unutar pasusa. Ne prelazi sam u novi red. Zatvara se sa </span>."
+        },
+        {
+          "label": "Napravi grupu za usluge",
+          "description": "Odmah posle glavnog h1 postavi <div class=\"usluge\">. U njega smesti postojeći h2 i pasus sa ponudom, pa zatvori </div>."
+        },
+        {
+          "label": "Sačuvaj naslov i opis grupe",
+          "description": "Unutar div elementa zadrži <h2>Naše usluge</h2> i <p>Nudimo SEO audit i link building.</p>."
+        },
+        {
+          "label": "Istakni deo sledećeg pasusa",
+          "description": "U pasusu koji sadrži Naša SEO analiza pomaže sajtu. obuhvati samo reči SEO analiza tagom <span class=\"istaknuto\"> ... </span>."
+        },
+        {
+          "label": "Ne dodaj CSS",
+          "description": "Za sada koristi samo HTML. class je naziv grupe, ali bez CSS-a ne menja izgled. Sačuvaj ostale elemente i uvučenost koda."
+        }
+      ],
+      "previewTable": [],
+      "starterCode": "<!DOCTYPE html>\n<html lang=\"sr\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Moje SEO usluge</title>\n    </head>\n    <body>\n        <h1>Moja SEO agencija</h1>\n        <h2>Naše usluge</h2>\n        <p>Nudimo SEO audit i link building.</p>\n        <p>Naša SEO analiza pomaže sajtu.</p>\n    </body>\n</html>",
+      "check": {
+        "kind": "rules",
+        "rules": [
+          {
+            "type": "selector-count",
+            "label": "Postoji tačno jedna grupa div.usluge",
+            "selector": "body > div.usluge",
+            "count": 1
+          },
+          {
+            "type": "text-equals",
+            "label": "H1 je sačuvan",
+            "selector": "body > h1",
+            "value": "Moja SEO agencija"
+          },
+          {
+            "type": "text-equals",
+            "label": "H2 je unutar div grupe",
+            "selector": "body > div.usluge > h2",
+            "value": "Naše usluge"
+          },
+          {
+            "type": "text-equals",
+            "label": "Opis usluga je unutar div grupe",
+            "selector": "body > div.usluge > p",
+            "value": "Nudimo SEO audit i link building."
+          },
+          {
+            "type": "selector-count",
+            "label": "Postoji tačno jedan span.istaknuto",
+            "selector": "body > p > span.istaknuto",
+            "count": 1
+          },
+          {
+            "type": "text-equals",
+            "label": "U span elementu je samo SEO analiza",
+            "selector": "body > p > span.istaknuto",
+            "value": "SEO analiza"
+          },
+          {
+            "type": "text-equals",
+            "label": "Završni pasus je sačuvan",
+            "selector": "body > p",
+            "value": "Naša SEO analiza pomaže sajtu."
+          },
+          {
+            "type": "selector-count",
+            "label": "Postoje tačno dva vidljiva pasusa",
+            "selector": "body p",
+            "count": 2
+          },
+          {
+            "type": "text-equals",
+            "label": "Title je sačuvan",
+            "selector": "head title",
+            "value": "Moje SEO usluge"
+          }
+        ]
+      }
     }
   ]
 }
