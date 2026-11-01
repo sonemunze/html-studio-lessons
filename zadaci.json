@@ -220,36 +220,48 @@
     },
     {
       "id": "html-13-div-span",
-      "version": 1,
+      "version": 2,
       "number": 13,
       "title": "Lekcija 13 — div i span",
       "level": "Početnik",
-      "summary": "Nauči da grupišeš HTML sadržaj: <div> za veći deo stranice, <span> za deo teksta. Ovi elementi bez CSS-a ne dodaju boje niti posebnu dekoraciju.",
+      "summary": "PREGLEDAN ZADATAK: Tačan tekst za TITLE, H1, H2, P1 i P2 je naveden na početku. Napravi div.usluge i span.istaknuto bez menjanja zadatih reči.",
       "language": "html",
       "steps": [
         {
-          "label": "Šta je div?",
-          "description": "<div> je neutralna kutija za grupisanje više elemenata. Po pravilu zauzima novu liniju. Zatvara se sa </div>."
+          "label": "OBAVEZNI TEKST — PROČITAJ PRVO",
+          "description": "Sve ove reči moraš prepisati TAČNO (velika/mala slova, š i tačke):\nTITLE: Moje SEO usluge\nH1: Moja SEO agencija\nH2: Naše usluge\nP1: Nudimo SEO audit i link building.\nP2: Naša SEO analiza pomaže sajtu."
         },
         {
-          "label": "Šta je span?",
-          "description": "<span> označava mali deo teksta unutar pasusa. Ne prelazi sam u novi red. Zatvara se sa </span>."
+          "label": "1. TITLE — naslov browser kartice",
+          "description": "U <head> mora da piše TAČNO: <title>Moje SEO usluge</title>"
         },
         {
-          "label": "Napravi grupu za usluge",
-          "description": "Odmah posle glavnog h1 postavi <div class=\"usluge\">. U njega smesti postojeći h2 i pasus sa ponudom, pa zatvori </div>."
+          "label": "2. H1 — glavni naslov",
+          "description": "U <body> mora da piše TAČNO: <h1>Moja SEO agencija</h1>"
         },
         {
-          "label": "Sačuvaj naslov i opis grupe",
-          "description": "Unutar div elementa zadrži <h2>Naše usluge</h2> i <p>Nudimo SEO audit i link building.</p>."
+          "label": "3. DIV — otvori grupu",
+          "description": "Odmah POSLE </h1> otvori: <div class=\"usluge\">"
         },
         {
-          "label": "Istakni deo sledećeg pasusa",
-          "description": "U pasusu koji sadrži Naša SEO analiza pomaže sajtu. obuhvati samo reči SEO analiza tagom <span class=\"istaknuto\"> ... </span>."
+          "label": "4. H2 — podnaslov unutar DIV",
+          "description": "Unutar div grupe napiši TAČNO: <h2>Naše usluge</h2> — OBAVEZNO slovo š!"
         },
         {
-          "label": "Ne dodaj CSS",
-          "description": "Za sada koristi samo HTML. class je naziv grupe, ali bez CSS-a ne menja izgled. Sačuvaj ostale elemente i uvučenost koda."
+          "label": "5. P1 — pasus unutar DIV",
+          "description": "Ispod H2, u ISTOM div elementu, napiši TAČNO: <p>Nudimo SEO audit i link building.</p> — obavezna tačka na kraju."
+        },
+        {
+          "label": "6. Zatvori DIV grupu",
+          "description": "Posle prvog pasusa napiši </div>. H2 i prvi pasus ostaju unutar div."
+        },
+        {
+          "label": "7. P2 i SPAN — drugi pasus",
+          "description": "Ispod div grupe napravi pasus. Njegov TAČAN sadržaj je: Naša SEO analiza pomaže sajtu. Samo reči SEO analiza obuhvati sa <span class=\"istaknuto\"> i </span>."
+        },
+        {
+          "label": "8. Konačna provera",
+          "description": "Ne menjaj zadate reči u TITLE, H1, H2, P1 i P2. Čuvaj HTML meta tagove iz početnog koda. Ne dodaj CSS. Nakon pisanja proveri svoj kod."
         }
       ],
       "previewTable": [],
