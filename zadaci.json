@@ -325,6 +325,121 @@
           }
         ]
       }
+    },
+    {
+      "id": "html-14-semantic",
+      "version": 1,
+      "number": 14,
+      "title": "Lekcija 14 — semantički HTML (header, nav, main, section, footer)",
+      "level": "Početnik",
+      "summary": "Nauči da organizuješ HTML stranicu smislenim elementima: header, nav, main, section i footer. Svaki traženi tekst je napisan tačno i pregledno.",
+      "language": "html",
+      "steps": [
+        {
+          "label": "OBAVEZNI TEKST — PROČITAJ PRVO",
+          "description": "TAČAN TEKST (sa istim slovima i tačkama):\nTITLE: Semantička SEO stranica\nH1: Moja SEO agencija\nLINK u nav: Usluge\nH2: SEO ponuda\nP1 (section): Nudimo SEO audit i link building.\nP2 (footer): Kontaktirajte nas za ponudu."
+        },
+        {
+          "label": "1. Šta je semantički HTML?",
+          "description": "Semantički elementi govore kakvu ULOGU ima deo stranice. <header> je zaglavlje, <nav> navigacija, <main> glavni sadržaj, <section> tematska celina, <footer> podnožje. Bez CSS-a ne prave poseban dizajn."
+        },
+        {
+          "label": "2. HEADER i H1",
+          "description": "U <body> napravi <header>. Unutar njega zadrži TAČNO: <h1>Moja SEO agencija</h1>."
+        },
+        {
+          "label": "3. NAV i LINK",
+          "description": "Unutar ISTOG <header> dodaj <nav> i u njega smesti postojeći link: <a href=\"#usluge\">Usluge</a>. Zatvori </nav>, pa </header>."
+        },
+        {
+          "label": "4. MAIN",
+          "description": "Posle </header> dodaj <main>. On sadrži glavni sadržaj stranice; koristi samo jedan main u ovoj vežbi."
+        },
+        {
+          "label": "5. SECTION sa ID usluge",
+          "description": "Unutar <main> napravi <section id=\"usluge\">. U njemu zadrži TAČNO: <h2>SEO ponuda</h2> i <p>Nudimo SEO audit i link building.</p>. Zatvori </section> i </main>."
+        },
+        {
+          "label": "6. FOOTER",
+          "description": "Posle </main> napravi <footer> i u njega smesti TAČNO: <p>Kontaktirajte nas za ponudu.</p>. Zatvori </footer>."
+        },
+        {
+          "label": "7. PROVERA",
+          "description": "Ne menjaj TITLE, H1, LINK, H2, P1 i P2. Sačuvaj meta charset i viewport. Obrati pažnju da je svaki element pravilno otvoren i zatvoren."
+        }
+      ],
+      "previewTable": [],
+      "starterCode": "<!DOCTYPE html>\n<html lang=\"sr\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Semantička SEO stranica</title>\n    </head>\n    <body>\n        <h1>Moja SEO agencija</h1>\n        <a href=\"#usluge\">Usluge</a>\n        <h2>SEO ponuda</h2>\n        <p>Nudimo SEO audit i link building.</p>\n        <p>Kontaktirajte nas za ponudu.</p>\n    </body>\n</html>",
+      "check": {
+        "kind": "rules",
+        "rules": [
+          {
+            "type": "selector-count",
+            "label": "Postoji jedno zaglavlje header",
+            "selector": "body > header",
+            "count": 1
+          },
+          {
+            "type": "text-equals",
+            "label": "H1 unutar header: Moja SEO agencija",
+            "selector": "body > header > h1",
+            "value": "Moja SEO agencija"
+          },
+          {
+            "type": "selector-count",
+            "label": "Navigacija nav je unutar header",
+            "selector": "body > header > nav",
+            "count": 1
+          },
+          {
+            "type": "text-equals",
+            "label": "Navigacioni link: Usluge",
+            "selector": "body > header > nav > a",
+            "value": "Usluge"
+          },
+          {
+            "type": "source-contains",
+            "label": "Link vodi ka #usluge",
+            "value": "href=\"#usluge\""
+          },
+          {
+            "type": "selector-count",
+            "label": "Postoji jedan glavni sadržaj main",
+            "selector": "body > main",
+            "count": 1
+          },
+          {
+            "type": "selector-count",
+            "label": "Section usluge je unutar main",
+            "selector": "body > main > section#usluge",
+            "count": 1
+          },
+          {
+            "type": "text-equals",
+            "label": "H2 unutar section: SEO ponuda",
+            "selector": "body > main > section#usluge > h2",
+            "value": "SEO ponuda"
+          },
+          {
+            "type": "text-equals",
+            "label": "P1 unutar section: Nudimo SEO audit i link building.",
+            "selector": "body > main > section#usluge > p",
+            "value": "Nudimo SEO audit i link building."
+          },
+          {
+            "type": "text-equals",
+            "label": "P2 unutar footer: Kontaktirajte nas za ponudu.",
+            "selector": "body > footer > p",
+            "value": "Kontaktirajte nas za ponudu."
+          },
+          {
+            "type": "text-equals",
+            "label": "TITLE: Semantička SEO stranica",
+            "selector": "head title",
+            "value": "Semantička SEO stranica"
+          }
+        ]
+      }
     }
   ]
 }
