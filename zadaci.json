@@ -1,0 +1,222 @@
+{
+  "format": "html-studio-lessons-v1",
+  "published": "2026-11-01",
+  "lessons": [
+    {
+      "id": "html-final-tabela",
+      "version": 1,
+      "number": 10,
+      "title": "Završni zadatak — HTML tabele",
+      "level": "Početnik",
+      "summary": "Napravi SEO tabelu sa 4 reda i 3 kolone. To je završna provera pre Lekcije 11.",
+      "language": "html",
+      "steps": [
+        {
+          "label": "Prvi red — naslovi",
+          "description": "Napravi jedan <tr> sa tri <th>: Domen, DR, Backlinkovi."
+        },
+        {
+          "label": "Drugi red",
+          "description": "Dodaj <tr> sa tri <td>: google.com, 95, 5000."
+        },
+        {
+          "label": "Treći red",
+          "description": "Dodaj <tr> sa tri <td>: bing.com, 90, 3500."
+        },
+        {
+          "label": "Četvrti red",
+          "description": "Dodaj <tr> sa tri <td>: example.com, 40, 120."
+        },
+        {
+          "label": "Zatvaranje",
+          "description": "Svaki red i sve ćelije zatvori odgovarajućim tagom. Na kraju dodaj </table>."
+        }
+      ],
+      "previewTable": [
+        [
+          "Domen",
+          "DR",
+          "Backlinkovi"
+        ],
+        [
+          "google.com",
+          "95",
+          "5000"
+        ],
+        [
+          "bing.com",
+          "90",
+          "3500"
+        ],
+        [
+          "example.com",
+          "40",
+          "120"
+        ]
+      ],
+      "starterCode": "<table>\n    \n</table>",
+      "check": {
+        "kind": "table",
+        "rows": [
+          [
+            "Domen",
+            "DR",
+            "Backlinkovi"
+          ],
+          [
+            "google.com",
+            "95",
+            "5000"
+          ],
+          [
+            "bing.com",
+            "90",
+            "3500"
+          ],
+          [
+            "example.com",
+            "40",
+            "120"
+          ]
+        ],
+        "headRows": 1
+      }
+    },
+    {
+      "id": "html-11-meta",
+      "version": 1,
+      "number": 11,
+      "title": "Lekcija 11 — lang, charset i viewport",
+      "level": "Početnik",
+      "summary": "Nauči da navedeš jezik stranice, kodiranje i prilagođavanje mobilnom ekranu.",
+      "language": "html",
+      "steps": [
+        {
+          "label": "Jezik dokumenta",
+          "description": "Na <html> dodaj atribut lang=\"sr\" da označiš srpski jezik."
+        },
+        {
+          "label": "Srpska slova",
+          "description": "Unutar <head> dodaj <meta charset=\"UTF-8\"> radi pravilnog prikaza č, ć, š, ž, đ."
+        },
+        {
+          "label": "Mobilni prikaz",
+          "description": "Unutar <head> dodaj <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">."
+        },
+        {
+          "label": "Naslov",
+          "description": "Postavi <title>Moja HTML lekcija 11</title> u head."
+        },
+        {
+          "label": "Sadržaj",
+          "description": "U body napiši <h1>Učim HTML</h1> i <p>Čaša, ćevap, škola, žaba, đak.</p>."
+        }
+      ],
+      "previewTable": [],
+      "starterCode": "<!DOCTYPE html>\n<html lang=\"sr\">\n    <head>\n        <title>Moja HTML lekcija 11</title>\n    </head>\n    <body>\n        <h1>Učim HTML</h1>\n        <p>Čaša, ćevap, škola, žaba, đak.</p>\n    </body>\n</html>",
+      "check": {
+        "kind": "meta",
+        "lang": "sr",
+        "charset": "utf-8",
+        "title": "Moja HTML lekcija 11",
+        "heading": "Učim HTML",
+        "paragraph": "Čaša, ćevap, škola, žaba, đak."
+      }
+    },
+    {
+      "id": "html-12-komentari",
+      "version": 1,
+      "number": 12,
+      "title": "Lekcija 12 — HTML komentari",
+      "level": "Početnik",
+      "summary": "Nauči sintaksu <!-- komentar -->, dodaj dve jasne beleške i privremeno sakrij jedan pasus. HTML komentari nisu mesto za tajne podatke.",
+      "language": "html",
+      "steps": [
+        {
+          "label": "Pravilo 1 — početak i kraj",
+          "description": "HTML komentar počinje sa <!-- i završava se sa -->. Browser ga ne prikazuje posetiocima, ali je vidljiv u izvornom HTML kodu."
+        },
+        {
+          "label": "Prvi komentar",
+          "description": "Odmah pre <h1> napiši tačno: <!-- Glavni naslov -->"
+        },
+        {
+          "label": "Drugi komentar",
+          "description": "Odmah pre <ul> napiši tačno: <!-- SEO usluge -->"
+        },
+        {
+          "label": "Sakrij pasus",
+          "description": "Odmah posle </ul> napiši tačno: <!-- <p>Skrivena poruka</p> -->. Taj pasus ne sme biti vidljiv u browseru."
+        },
+        {
+          "label": "Sačuvaj sadržaj",
+          "description": "Naslov mora biti Moja SEO agencija, vidljivi pasus Učim HTML komentare., a lista mora imati stavke SEO Audit i Link Building."
+        },
+        {
+          "label": "Bez tajni",
+          "description": "Ne čuvaj API ključeve, lozinke ni druge tajne u HTML komentarima."
+        }
+      ],
+      "previewTable": [],
+      "starterCode": "<!DOCTYPE html>\n<html lang=\"sr\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>HTML komentari</title>\n    </head>\n    <body>\n        <h1>Moja SEO agencija</h1>\n        <p>Učim HTML komentare.</p>\n        <ul>\n            <li>SEO Audit</li>\n            <li>Link Building</li>\n        </ul>\n    </body>\n</html>",
+      "check": {
+        "kind": "rules",
+        "rules": [
+          {
+            "type": "source-contains",
+            "label": "Prvi komentar pre naslova",
+            "value": "<!-- Glavni naslov -->"
+          },
+          {
+            "type": "source-contains",
+            "label": "Drugi komentar pre liste",
+            "value": "<!-- SEO usluge -->"
+          },
+          {
+            "type": "source-contains",
+            "label": "Pasus skriven u komentaru",
+            "value": "<!-- <p>Skrivena poruka</p> -->"
+          },
+          {
+            "type": "selector-count",
+            "label": "Samo jedan vidljivi pasus",
+            "selector": "body p",
+            "count": 1
+          },
+          {
+            "type": "text-equals",
+            "label": "Naslov je sačuvan",
+            "selector": "body h1",
+            "value": "Moja SEO agencija"
+          },
+          {
+            "type": "text-equals",
+            "label": "Vidljivi pasus je sačuvan",
+            "selector": "body p",
+            "value": "Učim HTML komentare."
+          },
+          {
+            "type": "selector-count",
+            "label": "Lista ima dve stavke",
+            "selector": "body ul li",
+            "count": 2
+          },
+          {
+            "type": "text-equals",
+            "label": "Prva stavka je SEO Audit",
+            "selector": "body ul li",
+            "index": 0,
+            "value": "SEO Audit"
+          },
+          {
+            "type": "text-equals",
+            "label": "Druga stavka je Link Building",
+            "selector": "body ul li",
+            "index": 1,
+            "value": "Link Building"
+          }
+        ]
+      }
+    }
+  ]
+}
