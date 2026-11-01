@@ -440,6 +440,138 @@
           }
         ]
       }
+    },
+    {
+      "id": "html-15-forme",
+      "version": 1,
+      "number": 15,
+      "title": "Lekcija 15 — HTML forme (form, label, input, button)",
+      "level": "Početnik",
+      "summary": "Nauči da napraviš jednostavnu kontakt formu sa imenom, email adresom i dugmetom. Obavezni tekstovi i HTML atributi prikazani su posebno.",
+      "language": "html",
+      "steps": [
+        {
+          "label": "OBAVEZNI TEKST — PROČITAJ PRVO",
+          "description": "PREPIŠI TAČNO (velika/mala slova i tačke):\nTITLE: Kontakt forma\nH1: Kontaktirajte nas\nH2: Pošaljite upit\nP: Popunite formu za SEO ponudu.\nLABEL 1: Ime:\nLABEL 2: Email:\nBUTTON: Pošalji upit"
+        },
+        {
+          "label": "1. Šta je HTML forma?",
+          "description": "<form> grupiše polja za unos i dugme za slanje. Bez servera/backend-a forma ne šalje stvarni email. Ovde je ovo samo vežba."
+        },
+        {
+          "label": "2. Sačuvaj naslove i pasus",
+          "description": "Zadrži tačno <title>Kontakt forma</title>, <h1>Kontaktirajte nas</h1>, <h2>Pošaljite upit</h2> i <p>Popunite formu za SEO ponudu.</p>."
+        },
+        {
+          "label": "3. Otvori formu",
+          "description": "Ispod pasusa otvori <form action=\"#\" method=\"get\">. Na kraju je zatvori sa </form>. action=\"#\" je samo za demonstraciju; ne šalje poruke na email."
+        },
+        {
+          "label": "4. Prvo polje — IME",
+          "description": "Unutar form napiši <label for=\"ime\">Ime:</label>, a ispod <input type=\"text\" id=\"ime\" name=\"ime\">. for i id imaju istu vrednost ime."
+        },
+        {
+          "label": "5. Drugo polje — EMAIL",
+          "description": "Ispod prvog polja napiši <label for=\"email\">Email:</label> i <input type=\"email\" id=\"email\" name=\"email\">. for i id imaju istu vrednost email."
+        },
+        {
+          "label": "6. Dugme",
+          "description": "Na kraju forme napiši <button type=\"submit\">Pošalji upit</button>. submit znači pokušaj slanja forme, ali ovde nema pravog primaoca."
+        },
+        {
+          "label": "7. Ne dodaj CSS ili JavaScript",
+          "description": "Samo HTML za sada. Sačuvaj strukturu html, head, body, charset i viewport. input je prazan (void) element: ne treba </input>."
+        },
+        {
+          "label": "8. Sam proveri",
+          "description": "Očekuje se tačno 1 form, 2 label, 2 input i 1 button. Proveri tekst i atribute; zatim klikni Proveri ovaj zadatak."
+        }
+      ],
+      "previewTable": [],
+      "starterCode": "<!DOCTYPE html>\n<html lang=\"sr\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Kontakt forma</title>\n    </head>\n    <body>\n        <h1>Kontaktirajte nas</h1>\n        <h2>Pošaljite upit</h2>\n        <p>Popunite formu za SEO ponudu.</p>\n        <form action=\"#\" method=\"get\">\n\n        </form>\n    </body>\n</html>",
+      "check": {
+        "kind": "rules",
+        "rules": [
+          {
+            "type": "text-equals",
+            "label": "TITLE: Kontakt forma",
+            "selector": "head title",
+            "value": "Kontakt forma"
+          },
+          {
+            "type": "text-equals",
+            "label": "H1: Kontaktirajte nas",
+            "selector": "body h1",
+            "value": "Kontaktirajte nas"
+          },
+          {
+            "type": "text-equals",
+            "label": "H2: Pošaljite upit",
+            "selector": "body h2",
+            "value": "Pošaljite upit"
+          },
+          {
+            "type": "text-equals",
+            "label": "P: Popunite formu za SEO ponudu.",
+            "selector": "body p",
+            "value": "Popunite formu za SEO ponudu."
+          },
+          {
+            "type": "selector-count",
+            "label": "Jedna test forma sa action=# i method=get",
+            "selector": "body form[action=\"#\"][method=\"get\"]",
+            "count": 1
+          },
+          {
+            "type": "selector-count",
+            "label": "Dve label oznake unutar forme",
+            "selector": "form label",
+            "count": 2
+          },
+          {
+            "type": "text-equals",
+            "label": "LABEL 1: Ime:",
+            "selector": "form label[for=\"ime\"]",
+            "value": "Ime:"
+          },
+          {
+            "type": "selector-count",
+            "label": "INPUT 1: text, id=ime, name=ime",
+            "selector": "form input[type=\"text\"][id=\"ime\"][name=\"ime\"]",
+            "count": 1
+          },
+          {
+            "type": "text-equals",
+            "label": "LABEL 2: Email:",
+            "selector": "form label[for=\"email\"]",
+            "value": "Email:"
+          },
+          {
+            "type": "selector-count",
+            "label": "INPUT 2: email, id=email, name=email",
+            "selector": "form input[type=\"email\"][id=\"email\"][name=\"email\"]",
+            "count": 1
+          },
+          {
+            "type": "selector-count",
+            "label": "Ukupno dva input polja",
+            "selector": "form input",
+            "count": 2
+          },
+          {
+            "type": "text-equals",
+            "label": "BUTTON: Pošalji upit",
+            "selector": "form button[type=\"submit\"]",
+            "value": "Pošalji upit"
+          },
+          {
+            "type": "selector-count",
+            "label": "Samo jedno submit dugme",
+            "selector": "form button",
+            "count": 1
+          }
+        ]
+      }
     }
   ]
 }
